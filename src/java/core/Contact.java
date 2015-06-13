@@ -17,6 +17,10 @@ public class Contact {
     this.phone = phone;
   }
 
+  public Contact(Integer id) {
+    this.id = id;
+  }
+  
   public Contact() {
   }
 
