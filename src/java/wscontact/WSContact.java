@@ -3,7 +3,6 @@ package wscontact;
 import core.Contact;
 import core.ContactList;
 import java.util.ArrayList;
-import javax.ws.rs.Consumes;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
@@ -83,7 +82,6 @@ public class WSContact {
   @DELETE
   @Path("/{id}")
   @Produces(MediaType.TEXT_PLAIN)
-  @Consumes(MediaType.TEXT_PLAIN)
   public boolean destroy(@PathParam("id") Integer id) {
     for (Contact contactList : ContactList.contactList) {
       if (contactList.getId().equals(id)) {
